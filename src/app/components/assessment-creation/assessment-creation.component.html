@@ -1,0 +1,83 @@
+<app-header />
+<div class="container mt-3">
+    <button type="button" class="btn btn-primary float-end my-3" data-bs-toggle="modal" data-bs-target="#assessModal">
+        + Add Assessment
+    </button>
+    <div class="modal fade" id="assessModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">{{editingAssessment?'Edit':'Add'}} Assessment</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <form [formGroup]="assessmentForm">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" placeholder="Assessment Title"
+                                    formControlName="title">
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <select class="form-select" formControlName="type">
+                                    <option value="" disabled selected>Choose Assessment Type</option>
+                                    <option value="quiz">Quiz</option>
+                                    <option value="assignment">Assignment</option>
+                                    <option value="survey">Survey</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <input type="text" class="form-control" placeholder="Instructions"
+                                    formControlName="instructions">
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <input type="text" class="form-control" placeholder="Duration in seconds"
+                                    formControlName="time">
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <select class="form-select" formControlName="questions" multiple>
+                                    <option *ngFor="let ques of questions" [value]="ques.id">
+                                        {{ ques.id }}. {{ ques.quesText }}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" [disabled]="assessmentForm.invalid"
+                            (click)="saveAssessment()" data-bs-dismiss="modal">{{editingAssessment ? 'Update' :
+                            'Save'}}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <input type="text" [(ngModel)]="searchText" placeholder="Search" class="form-control my-2 bg-light w-500">
+    <table class="table table-bordered table-striped table-responsive mt-2">
+        <thead>
+            <tr class="text-center">
+                <th>S.No</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="assessments.length === 0">
+                <td class="text-center" colspan="4">No assessments available</td>
+            </tr>
+            <tr *ngFor="let ass of assessments| filter:searchText;; let i = index;" class="text-center">
+                <td>{{ i + 1 }}</td>
+                <td>{{ ass.title }}</td>
+                <td>{{ ass.type }}</td>
+                <td>
+                    <button class="btn btn-warning my-1" data-bs-toggle="modal" data-bs-target="#assessModal"
+                        (click)="editAssessment(ass)">Edit</button>
+                    &nbsp;&nbsp;
+                    <button class="btn btn-danger my-1" (click)="deleteAssessment(ass)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

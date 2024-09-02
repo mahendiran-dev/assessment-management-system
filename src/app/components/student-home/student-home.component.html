@@ -1,0 +1,27 @@
+<div class="container mt-4">
+    <h2 class="text-center">Available Assessments</h2>
+    <table class="table table-bordered table-striped table-responsive mt-2">
+        <thead>
+            <tr class="text-center">
+                <th>S.No</th>
+                <th>Title</th>
+                <th>Instruction</th>
+                <th>Take Assessment</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="assessments.length === 0">
+                <td class="text-center" colspan="4">No Assessment available</td>
+            </tr>
+            <tr *ngFor="let assessment of assessments;let i=index" class="text-center">
+                <td>{{i+1 }}</td>
+                <td>{{assessment.title }}</td>
+                <td>{{assessment.instructions }}</td>
+                <td> <button class="btn btn-primary" (click)="takeAssessment(assessment.id)">
+                        Take Assessment
+                    </button></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,178 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "quesText": "What is Angular?",
+      "options": [
+        "A framework",
+        "A library",
+        "A language"
+      ],
+      "correctAnswer": "A framework",
+      "tags": "Angular,Frontend",
+      "category": "Frontend",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "2",
+      "quesText": "Explain Dependency Injection.",
+      "options": [
+        "A design pattern",
+        "A module",
+        "A class"
+      ],
+      "correctAnswer": "A design pattern",
+      "tags": "Angular,DI",
+      "category": "Frontend",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "3",
+      "quesText": "What is REST API?",
+      "options": [
+        "A protocol",
+        "An architectural style",
+        "A programming language"
+      ],
+      "correctAnswer": "An architectural style",
+      "tags": "API,Backend",
+      "category": "Backend",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "4",
+      "quesText": "What are Angular directives?",
+      "options": [
+        "Building blocks",
+        "Styling tools",
+        "Data models"
+      ],
+      "correctAnswer": "Building blocks",
+      "tags": "Angular,Directives",
+      "category": "Frontend",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "5",
+      "quesText": "Explain the lifecycle hooks in Angular.",
+      "options": [
+        "ngOnInit",
+        "ngOnDestroy",
+        "ngOnChanges"
+      ],
+      "correctAnswer": "ngOnInit",
+      "tags": "Angular,Lifecycle",
+      "category": "Frontend",
+      "difficulty": "Hard"
+    },
+    {
+      "id": "6",
+      "quesText": "What is the difference between Angular and AngularJS?",
+      "options": [
+        "Angular is newer",
+        "AngularJS uses JavaScript",
+        "Angular uses TypeScript"
+      ],
+      "correctAnswer": "Angular uses TypeScript",
+      "tags": "Angular,Comparison",
+      "category": "Frontend",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "7",
+      "quesText": "Explain Angular services.",
+      "options": [
+        "Singletons for data sharing",
+        "Components for UI",
+        "Modules for organization"
+      ],
+      "correctAnswer": "Singletons for data sharing",
+      "tags": "Angular,Services",
+      "category": "Frontend",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "8",
+      "quesText": "What are Angular modules?",
+      "options": [
+        "Containers for components",
+        "Data structures",
+        "CSS files"
+      ],
+      "correctAnswer": "Containers for components",
+      "tags": "Angular,Modules",
+      "category": "Frontend",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "9",
+      "quesText": "What is a component in Angular?",
+      "options": [
+        "A building block",
+        "A service",
+        "A directive"
+      ],
+      "correctAnswer": "A building block",
+      "tags": "Angular,Component",
+      "category": "Frontend",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "10",
+      "quesText": "Explain the concept of Observables in Angular.",
+      "options": [
+        "Data streams",
+        "Components",
+        "Services"
+      ],
+      "correctAnswer": "Data streams",
+      "tags": "Angular,Observables",
+      "category": "Frontend",
+      "difficulty": "Hard"
+    }
+  ],
+  "assessments": [
+    {
+      "title": "Angular Basics",
+      "type": "quiz",
+      "instructions": "Answer all the questions.",
+      "time": 300,
+      "questions": [
+        "2",
+        "3",
+        "4"
+      ],
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "Backend Concepts",
+      "type": "assignment",
+      "instructions": "Explain the concepts in detail.",
+      "time": 300,
+      "questions": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Advanced Angular",
+      "type": "quiz",
+      "instructions": "Answer all the questions.",
+      "time": 300,
+      "questions": [
+        "1",
+        "2",
+        "5",
+        "6",
+        "7",
+        "4"
+      ]
+    }
+  ]
+}

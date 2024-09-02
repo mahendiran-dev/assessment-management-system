@@ -89,7 +89,7 @@
             <tr *ngIf="questions.length === 0">
                 <td class="text-center" colspan="7">No questions available</td>
             </tr>
-            <tr *ngFor="let ques of questions assessments let i = index;" class="text-center">
+            <tr *ngFor="let ques of questions | filter:searchText;let i = index;" class="text-center">
                 <td>{{i + 1}}</td>
                 <td>{{ques.quesText}}</td>
                 <td>{{ques.tags}}</td>
